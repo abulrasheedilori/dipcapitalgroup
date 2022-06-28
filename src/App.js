@@ -1,26 +1,20 @@
-import logo from "./logo.svg";
-import "./App.css";
+import React from "react";
+import { Link, Outlet } from "react-router-dom";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> Let start our code no
-        </p>
-        <img src={logo} className="App-logo" alt="logo" />
-        <a
-          className="App-link"
-          href="https://www.react.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Development Investment Bank Captal Group</h1>
+      <nav>
+        <Link to="/">Home</Link> |{" "}
+        <Link to="/details">Details</Link> |{" "}
+        <Link to="/contact">Contact Us</Link>
+      </nav>
+      <div className="content">
+        <Outlet />
+      </div>
     </div>
   );
-}
+};
 
 export default App;
