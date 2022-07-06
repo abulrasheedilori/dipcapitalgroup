@@ -1,15 +1,11 @@
 import React from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import Header from "./screens/shared-components/Header";
 
 const App = () => {
   return (
     <div>
-      <h1>Development Investment Bank Captal Group</h1>
-      <nav>
-        <Link to="/">Home</Link> |{" "}
-        <Link to="/details">Details</Link> |{" "}
-        <Link to="/contact">Contact Us</Link>
-      </nav>
+      <Header />
       <div className="content">
         <Outlet />
       </div>
