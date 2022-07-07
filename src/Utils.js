@@ -7,3 +7,4 @@ export function getDetailedContent(id, list) {
 export function getMoreContent(id, list) {
   return list.filter((item) => item.id.toString() !== id);
 }
+
